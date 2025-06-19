@@ -10,12 +10,12 @@ class TradingBotException(Exception):
         self.filename = exc_tb.tb_frame.f_code.co_filename
 
     def __str__(self):
-        return f"Error occured in python script name {self.filename}, line number {self.lineno}, error messages {self.error_messages}"
+        return f"\nError occured in python script name -> {self.filename},\nLine number -> {self.lineno},\nError messages -> {self.error_messages}"
     
 
-if __name__ == "__main__":
-    try:
-        a = 1/10
-        print("This will not be printed")
-    except Exception as e:
-        raise TradingBotException(e, sys)
+# if __name__ == "__main__":
+#     try:
+#         a = 1/0
+#         print("This will not be printed")
+#     except Exception as e:
+#         raise TradingBotException(e, sys)

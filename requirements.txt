@@ -1,5 +1,9 @@
 lancedb
 langgraph
+langchain-groq
+langchain-ollama
+langchain-community
+langchain-text-splitters
 tavily-python
 polygon
 streamlit

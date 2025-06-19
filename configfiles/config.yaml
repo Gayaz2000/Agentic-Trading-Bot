@@ -1,0 +1,13 @@
+vectordb:
+    vdb_name: "test"
+
+embedding_model:
+  provider : "Ollama"
+  model_name : "llama3.2:1b"
+
+retriever:
+  top_k : 3
+
+llm :
+  provider : "groq"
+  model_name : "deepseek-r1-distill-llama-70b"
