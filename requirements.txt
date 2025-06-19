@@ -1,0 +1,6 @@
+lancedb
+langgraph
+tavily-python
+polygon
+streamlit
+fastapi

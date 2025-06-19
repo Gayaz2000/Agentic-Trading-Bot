@@ -4,4 +4,11 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "fastapi>=0.115.13",
+    "lancedb>=0.23.0",
+    "langgraph>=0.4.8",
+    "polygon>=1.2.6",
+    "streamlit>=1.46.0",
+    "tavily-python>=0.7.7",
+]
