@@ -11,7 +11,7 @@ from langchain_community.tools.polygon import PolygonFinancials
 from langchain_community.utilities.polygon import PolygonAPIWrapper
 from langchain_community.tools.bing_search import BingSearchResults
 from data_models.models import RagToolSchema
-
+from src.data_ingestion_pipe.ingestion_pipeline import DataIngestion
 
 @tool(args_schema=RagToolSchema)
 def create_retriever_tool(question):

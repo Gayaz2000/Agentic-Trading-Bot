@@ -1,5 +1,5 @@
 vectordb:
-    vdb_name: "test"
+    vdb_name: "langchain-test-index"
 
 embedding_model:
   provider : "Ollama"
@@ -7,7 +7,16 @@ embedding_model:
 
 retriever:
   top_k : 3
+  score_threshold: 0.4
 
 llm :
-  provider : "groq"
-  model_name : "deepseek-r1-distill-llama-70b"
+  groq:
+    provider : "groq"
+    model_name : "deepseek-r1-distill-llama-70b"
+  ollama:
+    provider : "ollama"
+    model_name: "llama3.2:1b"
+
+tools:
+  tavily:
+    max_results: 3
