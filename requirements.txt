@@ -1,12 +1,13 @@
-lancedb
 langgraph
 langchain-groq
 langchain-ollama
 langchain-community
 langchain-text-splitters
+langchain-pinecone
 tavily-python
 polygon
 streamlit
 fastapi
+pypdf
 
 -e .

@@ -1,5 +1,6 @@
 vectordb:
-    vdb_name: "langchain-test-index"
+    vdb_name: "trading-bot"
+    index_name: "IVF"
 
 embedding_model:
   provider : "Ollama"
