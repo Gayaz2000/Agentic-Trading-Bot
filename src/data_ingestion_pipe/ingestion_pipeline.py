@@ -42,20 +42,20 @@ class DataIngestion:
         """
         documents = []
         for uploaded_file in uploaded_files:
-            if uploaded_file.name.endswith("pdf"):
+            if uploaded_file.filename.endswith("pdf"):
                 with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as temp_file:
                     tempfile.write(uploaded_file.read())
                     loader = PyPDFLoader(temp_file.name)
                     documents.extend(loader.load())
 
-            elif uploaded_file.name.endswith("docx"):
+            elif uploaded_file.filename.endswith("docx"):
                 with tempfile.NamedTemporaryFile(delete=False, suffix=".docx") as temp_file:
                     tempfile.write(uploaded_file.read())
                     loader = Docx2txtLoader(temp_file.name)
                     documents.extend(loader.load())
 
             else:
-                print(f"Unsupported file type: {uploaded_file.name}")
+                print(f"Unsupported file type: {uploaded_file.filename}")
             
             return documents
 

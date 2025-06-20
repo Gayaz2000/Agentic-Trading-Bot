@@ -21,7 +21,7 @@ with st.sidebar:
         if not upload_files:
             st.warning("Please upload the file")
         else:
-            files = [("files", (f.name, f.read(), f.type)) for f in upload_files]
+            files = [("files", (f.filename, f.read(), f.content_type)) for f in upload_files]
             with st.spinner("Uploading Files..."):
                 response = requests.post(f"{BASE_URL}/upload", files=files)
                 if response.status_code == 200:
